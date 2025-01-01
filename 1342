@@ -1,0 +1,31 @@
+problem 1342.
+
+code:
+class Solution {
+    public static int numberOfSteps(int num) {
+        int steps=0;
+        while(num>0)
+        {
+            if(num%2==0)
+            {
+                num=num/2;
+            }
+            else
+            {
+                num=num-1;
+            }
+            steps++;
+        }
+        return steps;
+    }
+    public static void main(String[]args)
+    {
+        int num1=14;
+        int num2=8;
+        int num3=123;
+
+        System.out.println(numberOfSteps(num1));
+        System.out.println(numberOfSteps(num2));
+        System.out.println(numberOfSteps(num3));
+    }
+}
